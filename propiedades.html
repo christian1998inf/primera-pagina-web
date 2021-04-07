@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>propiedades</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link  href="css/filtro.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+
+
+    <style>
+      .slider{
+        background: url("images/santiago1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+      }
+      .chat-container{
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          max-width: 340px;
+          height: auto;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          z-index: 999;
+
+        }
+        .chat-button{
+          width: 100%;
+          margin: 0;
+          cursor: pointer;
+          user-select: none;
+          padding: 4px 0;
+          background-color: #337AB7;
+          text-align: center;
+          color: #fff;
+        }
+        .chat-content{
+          margin: 0;
+          padding: 0;
+          background-color: #fff;
+          display: none;
+
+
+
+        }
+
+      }
+      footer{
+        width: 100%;
+        font-family: Raleway;
+      }
+      .footer-container{
+        width: 100%;
+        background: #272727;
+        color: #fff;
+      }
+      .footer-main{
+        width: 98%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .footer-main .footer-columna{
+        width: calc(100%/3);
+        text-align: justify;
+      }
+      .footer-main .footer-columna:nth-child(2){
+        padding: 8 20px;
+      }
+      .footer-main .footer-columna h3{
+        font-size: 32px;
+        color: #00C6EE;
+        margin-bottom: 20px;
+      }
+      .footer-main .footer-columna span p {
+        display: inline-block;
+        margin-left: 5px;
+        margin-bottom: 15px;
+        font-family: Raleway;
+
+      }
+      .contenedor{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        max-width: 2000px;
+      }
+      .navbar{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      @media screen and(max-width: 800px) {
+        .navbar{
+          width: 100%;
+        }
+      }
+
+      @media screen and(max-width: 400px){
+        .contenedor{
+          width: 100%;
+        }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="images/im-1.jpg" width="60" height="50" class="d-inline-block align-top" alt="">
+           Martinez Mera Propiedades
+        </a>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="https://martinesmerapropiedades.000webhostapp.com/index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Propiedades</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="https://martinesmerapropiedades.000webhostapp.com/quienessomos.html">Quienes somos</a></li>
+          </div>
+
+          </ul>
+        </div>
+
+    </nav>
+    <br><br>
+    <div class="container-fluid slider text-white d-flex flex-column justify-content-center align-items-center">
+      <div class="text-center">
+        <h3 class="hidden-xs-down">Propiedades</h3>
+
+
+      </div>
+
+
+      </div>
+      <br>
+
+
+
+    <div class="botones btn-group float-right   ">
+
+
+    <div class="dropdown container dropdown-collapse  ">
+      <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown">
+        Comuna
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" class="dropdown-item"  category="maipu">Maipu</a>
+        <a href="#" class="dropdown-item"  category="laflorida">La florida</a>
+        <a href="#" class="dropdown-item"  category="renca">Renca</a>
+        <a href="#" class="dropdown-item"  category="lascondes">Las condes</a>
+        <a href="#" class="dropdown-item"  category="puentealto">puente alto</a>
+        <a href="#" class="dropdown-item"  category="elmonte">el monte</a>
+        <a href="#" class="dropdown-item"  category="elbosque">el bosque</a>
+      </div>
+
+
+      </div>
+      <div class="dropdown container  "  >
+        <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown">
+          Tipo inmueble
+        </button>
+        <div class="dropdown-menu ">
+          <a href="#" class="dropdown-item"  category="casa">casa</a>
+          <a href="#" class="dropdown-item"  category="departamento">departamento</a>
+      </div>
+  </div>
+  <div class="dropdown container">
+    <button class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown">
+      Tipo
+    </button>
+    <div class="dropdown-menu">
+      <a href="#" class="dropdown-item"  category="arrendar">Arrendar</a>
+      <a href="#" class="dropdown-item"  category="vender">Vender</a>
+  </div>
+
+
+
+</div>
+
+</div>
+
+
+<br><br>
+
+
+  <section class="imagenes">
+
+
+
+    <div class="fotos" category="maipu" tipo="vender" tipoi="casa">
+
+  <div id="carousel1" class="carousel slide container w-50" data-ride="carousel"  >
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 " src="propiedades/maipu/casa0/casa0.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="propiedades/maipu/casa0/casa00.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="propiedades/maipu/casa0/casa000.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev w-50" href="#carousel1" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">anterior</span>
+  </a>
+  <a class="carousel-control-next w-50 " href="#carousel1" role="button" data-slide="next" >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">siguiente</span>
+  </a>
+  <div class="row mb-5">
+    <div class="col-3">
+      <p class="lead text-muted text-center">Precio: </p>
+      <p class="lead text-muted text-center">Descripcion: </p>
+    </div>
+    <div class="col-9">
+      <span class="bg-warning">$74.000.000</span>
+      <br><br>
+      <a href="#"><span class="badge badge-danger text-uppercase">6 dormitorios</span></a>
+      <a href="#"><span class="badge badge-primary text-uppercase">2 baños</span></a>
+      <a href="#"><span class="badge badge-primary text-uppercase">110m2</span></a>
+      <p class="contenido">
+        74.000.000 COMUNA MAIPU
+      Excelente oportunidad casa esquina
+      de 2 pisos con patente de de negocio varios propiedad totalmente saneada de toda deuda,ampliada y regularizada
+      exenta de contribuciones, cuenta con
+      110m2 totales, 94m2 construidos, 6 dormitorios,2 baños, ante jardín para 1 entrada de auto, living,comedor ,cocina,piso cerámico,cercanías mall arauco maipu, hospital del profesor,clínica bicentenario, supermercados, colegios,metro las parcelas,metro las rejas, calle referencias errazuriz simón bolívar.
+
+      </p>
+
+
+    </div>
+  </div>
+  </div>
+</div>
+
+<br><br>
+
+
+
+
+<div class="fotos" category="laflorida" tipo="vender" tipoi="casa">
+
+<div id="carousel2" class="carousel slide container w-50" data-ride="carousel"   >
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img class="d-block w-100" src="propiedades/laflorida/laflorida0/laflorida.jpg" alt="First slide">
+  </div>
+  <div class="carousel-item">
+    <img class="d-block w-100" src="propiedades/laflorida/laflorida0/laflorida1.jpg" alt="Second slide">
+  </div>
+  <div class="carousel-item">
+    <img class="d-block w-100" src="propiedades/laflorida/laflorida0/laflorida2.jpg" alt="Third slide">
+  </div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel2" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50" href="#carousel2" role="button" data-slide="next" >
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio:</p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+
+  </div>
+  <div class="col-9">
+      <span class="bg-warning">$230.000.000</span>
+      <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">3 dormitorios</span></a>
+    <a href="#"><span class="badge badge-primary text-uppercase">2 baños</span></a>
+
+
+    <p class="contenido">
+      230.000.000 comuna la florida se vende
+      Excelente propiedad con local comercial establecido,panadería con gran clientela y reconocido por sus exquisitas empanadas.
+      esta propiedad cuenta con cocina amoblada 3 dormitorios, 2 baños, patio para una entrada de autos se vende con local totalmente equipado con maquinarias.
+
+    </p>
+
+
+  </div>
+</div>
+</div>
+</div>
+<br><br>
+
+<div class="fotos" category="renca" tipo="vender" tipoi="casa">
+
+<div id="carousel3" class="carousel slide container w-50" data-ride="carousel"  >
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class="d-block w-100 " src="propiedades\renca\renca1/renca1.jpg" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\renca\renca1/renca2.jpg" alt="Second slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\renca\renca1/renca3.jpg" alt="Third slide">
+</div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel3" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50 " href="#carousel3" role="button" data-slide="next" >
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio: </p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+  </div>
+  <div class="col-9">
+    <span class="bg-warning">$39.000.000</span>
+    <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">2 dormitorios</span></a>
+    <a href="#"><span class="badge badge-primary text-uppercase">1 baños</span></a>
+    <a href="#"><span class="badge badge-primary text-uppercase">127m2</span></a>
+    <p class="contenido">
+      39.000.000 gestionando documentos
+se vende propiedad ubicada en comuna de renca,cuenta con dos dormitorios,1 baño patio para 2 entradas de auto
+127 m2 totales, 50m2 construidos cercana a calles principales
+    </p>
+
+
+  </div>
+</div>
+</div>
+</div>
+
+
+<br><br>
+<div class="fotos" category="maipu" tipo="vender" tipoi="casa">
+
+<div id="carousel4" class="carousel slide container w-50" data-ride="carousel"  >
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class="d-block w-100 " src="propiedades\maipu\casa1\casa1.jpg" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1a.jpg" alt="Second slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1b.jpg" alt="Third slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1c.jpg" alt="4 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1d.jpg" alt="5 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1e.jpg" alt="6 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1f.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1g.jpg" alt="8 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1h.jpg" alt="9 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casa1i.jpg" alt="10 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casaj.jpg" alt="11 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casak.jpg" alt="12 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\maipu\casa1\casam.jpg" alt="13 slide">
+</div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel4" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50 " href="#carousel4" role="button" data-slide="next" >
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio: </p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+  </div>
+  <div class="col-9">
+    <span class="bg-warning">$86.000.000</span>
+    <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">4 dormitorios</span></a>
+
+    <a href="#"><span class="badge badge-primary text-uppercase">1 baños</span></a>
+    <p class="contenido">
+      Valor 86.000.000 en comuna de maipu
+      Se vende casa esquina Excelente para habitar o para fines comerciales, sector consolidado, esta propiedad cuenta con
+      4 dormitorios,1 baño,cocina amplia, living comedor,propiedad con ampliación regularizada, exenta de basura y contribuciones, cuenta con termo panel techo interior con vigas a la vista, piso baldo sin cerámico, cocina con cerámica. cocina amoblada, y dormitorios con closet, ante jardín, patio interior.
+      cercanías av principal santa Rosa, paradero 09 pajaritos maipu
+      cercana supermercado líder, santa isabel,metro av las parcelas, colegios el alba,y santa maría de maipu,
+      POBLACIÓN VILLA LOS NARANJOS
+    </p>
+
+
+  </div>
+</div>
+
+
+</div>
+</div>
+<br><br>
+<div class="fotos" category="lascondes" tipo="vender" tipoi="departamento">
+
+<div id="carousel5" class="carousel slide container w-50" data-ride="carousel"  >
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class="d-block w-100 " src="propiedades\lascondes\lascondes0\lascondes1.jpg" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes2.jpg" alt="Second slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes3.jpg" alt="Third slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes4.jpg" alt="4 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes5.jpg" alt="5 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes6.jpg" alt="6 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes7.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes8.jpg" alt="8 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes9.jpg" alt="9 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes10.jpg" alt="10 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\lascondes\lascondes0\lascondes11.jpg" alt="11 slide">
+</div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel5" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50 " href="#carousel5" role="button" data-slide="next" >
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio: </p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+  </div>
+  <div class="col-9">
+    <span class="bg-warning">$580.000.000</span>
+    <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">5 dormitorios</span></a>
+    <a href="#"><span class="badge badge-primary text-uppercase">8 baños</span></a>
+    <a href="#"><span class="badge badge-primary text-uppercase">254m2</span></a>
+    <p class="contenido">
+      580.000.000 comuna de las condes vendo
+    Exclusivo departamento con privilegiada ubicación, esta propiedad cuenta con metros totales 254 m2
+    5 dormitorios el principal en suite con walking close 5 baños living comedor por separado,con terraza, sala de estar, cocina amoblada con cubierta de piedra,horno eléctrico
+    aire acondicionado,3 baños con tina, 2 con receptáculo, principal con jacuzzi, calefacción por losa radiante, ascensor privado palier, 3 estacionamientos, y bodega,
+    cercano a diversos servicios y con una inmejorable conectividad
+    equipamiento comunitario piscina, sauna,gimnasio, sala de eventos.
+    </p>
+
+
+  </div>
+</div>
+</div>
+</div>
+<br><br>
+<div class="fotos" category="puentealto" tipo="vender" tipoi="casa">
+
+<div id="carousel6" class="carousel slide container w-50" data-ride="carousel"  >
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class="d-block w-100 " src="propiedades\puentealto\puentealto0\puente0.jpg" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\puentealto\puentealto0\puente1.jpg" alt="Second slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\puentealto\puentealto0\puente2.jpg" alt="Third slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\puentealto\puentealto0\puente3.jpg" alt="4 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\puentealto\puentealto0\puente4.jpg" alt="5 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\puentealto\puentealto0\puente5.jpg" alt="6 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\puentealto\puentealto0\puente6.jpg" alt="7 slide">
+</div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel6" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50 " href="#carousel6" role="button" data-slide="next" >
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio: </p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+  </div>
+  <div class="col-9">
+    <span class="bg-warning">$33.000.000</span>
+    <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">2 dormitorios</span></a>
+
+    <a href="#"><span class="badge badge-primary text-uppercase">1 baños</span></a>
+    <p class="contenido">
+      33.000.000 comuna puente alto
+se vende casa de 2 pisos solida cercana a sargento manadier esta propiedad cuenta con 2 dormitorios, 1 baño,living comedor amplio, piso cerámico, patio lateral y ante jardín,colegios cercanos, supermercados, calles principales av Eyzaguirre.
+    </p>
+
+
+  </div>
+</div>
+
+
+</div>
+</div>
+<br><br>
+<div class="fotos" category="elmonte" tipo="vender" tipoi="casa">
+
+<div id="carousel7" class="carousel slide container w-50" data-ride="carousel"  >
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class="d-block w-100 " src="propiedades\elmonte\elmonte0\monte0.jpg" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte1.jpg" alt="Second slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte2.jpg" alt="Third slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte3.jpg" alt="4 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte4.jpg" alt="5 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte5.jpg" alt="6 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte6.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte7.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte8.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte9.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elmonte\elmonte0\monte10.jpg" alt="7 slide">
+</div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel7" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50 " href="#carousel7" role="button" data-slide="next" >
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio: </p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+  </div>
+  <div class="col-9">
+    <span class="bg-warning">$41.000.000</span>
+    <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">2 dormitorios</span></a>
+
+    <a href="#"><span class="badge badge-primary text-uppercase">1 baños</span></a>
+    <p class="contenido">
+      41.000.000 comuna el monte
+Vendo excelente casa de 2 pisos solida privilegiada por su naturaleza a su alrededor esta propiedad cuenta con
+2 dormitorios en segundo piso,1 baño,living comedor, patio lateral y patio interior,y ante jardín cercana a talagante, pomaire, 20 minutos de melipilla,acceso autopista.
+    </p>
+
+
+  </div>
+</div>
+
+
+</div>
+</div>
+<br><br>
+<div class="fotos" category="elbosque" tipo="vender" tipoi="casa">
+
+<div id="carousel8" class="carousel slide container w-50" data-ride="carousel"  >
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img class="d-block w-100 " src="propiedades\elbosque\elbosque0\bosque0.jpg" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque1.jpg" alt="Second slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque2.jpg" alt="Third slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque3.jpg" alt="4 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque4.jpg" alt="5 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque5.jpg" alt="6 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque6.jpg" alt="7 slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block w-100" src="propiedades\elbosque\elbosque0\bosque7.jpg" alt="7 slide">
+</div>
+</div>
+<a class="carousel-control-prev w-50" href="#carousel8" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">anterior</span>
+</a>
+<a class="carousel-control-next w-50 " href="#carousel8" role="button" data-slide="next" >
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">siguiente</span>
+</a>
+<div class="row mb-5">
+  <div class="col-3">
+    <p class="lead text-muted text-center">Precio: </p>
+    <p class="lead text-muted text-center">Descripcion: </p>
+  </div>
+  <div class="col-9">
+    <span class="bg-warning">$31.000.000</span>
+    <br><br>
+    <a href="#"><span class="badge badge-danger text-uppercase">3 dormitorios</span></a>
+      <a href="#"><span class="badge badge-success text-uppercase">VENDIDA</span></a>
+    <a href="#"><span class="badge badge-primary text-uppercase">1 baños</span></a>
+    <p class="contenido">
+      31.000.000. VENDIDA
+se vende casa de 2 pisos en sector el bosque cuenta con
+3 dormitorios 1 baño cocina americana comedor amplio,patio interior cercana a calles principales colegios jardín infantil.
+      </p>
+
+
+  </div>
+</div>
+
+
+</div>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+<br><br><br><br>
+<footer>
+<div class="footer-container">
+<div class="footer-main">
+<div class="footer-columna">
+  <h3>Contacto</h3>
+  <span class="fa fa-phone">  09 5520 4370</span>
+  <br>
+  <span class="fa fa-envelope">  claudia.gestioninmobiliaria@gmail.com</span>
+
+</div>
+
+</div>
+</div>
+
+
+</footer>
+<section class="chat-container">
+  <div class="chat-button">
+  envienos un mensaje
+  </div>
+  <div class="chat-content">
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMartinez-Mera-propiedades-1802642326693938%2F%3Fti%3Das&tabs=messages&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+</section>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
